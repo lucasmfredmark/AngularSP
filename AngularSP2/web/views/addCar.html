@@ -1,0 +1,34 @@
+<h3>Add car</h3>
+<form>
+    <div class="row">
+        <div class="form-group col-xs-4">
+            <input type="text" placeholder="Year" class="form-control" ng-model="car.year">
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-xs-4">
+            <input type="text" placeholder="Registered" class="form-control" ng-model="car.registered">
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-xs-4">
+            <input type="text" placeholder="Make" class="form-control" ng-model="car.make">
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-xs-4">
+            <input type="text" placeholder="Model" class="form-control" ng-model="car.model">
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-xs-4">
+            <input type="text" placeholder="Description" class="form-control" ng-model="car.description">
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-xs-4">
+            <input type="text" placeholder="Price" class="form-control" ng-model="car.price">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-default" ng-click="addEditCarCtrl.addEditCar(car)">Add car</button>
+</form>

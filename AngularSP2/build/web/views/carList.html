@@ -1,0 +1,37 @@
+<h2>Number of cars: {{carListCtrl.cars.length}}</h2>
+<input type="search" ng-model="carfilter" placeholder="Filter cars">
+
+<div>
+    <table class="table">
+        <thead >
+            <tr>
+                <td>ID</td>
+                <td><a href="" ng-click="carListCtrl.predicate = 'year'; carListCtrl.reverse = !carListCtrl.reverse">Year</a></td>
+                <td><a href="" ng-click="carListCtrl.predicate = 'registered'; carListCtrl.reverse = !carListCtrl.reverse">Registered</a></td>
+                <td><a href="" ng-click="carListCtrl.predicate = 'make'; carListCtrl.reverse = !carListCtrl.reverse">Make</a></td>
+                <td><a href="" ng-click="carListCtrl.predicate = 'model'; carListCtrl.reverse = !carListCtrl.reverse">Model</a></td>
+                <td><a href="" ng-click="carListCtrl.predicate = 'description'; carListCtrl.reverse = !carListCtrl.reverse">Description</a></td>
+                <td><a href="" ng-click="carListCtrl.predicate = 'price'; carListCtrl.reverse = !carListCtrl.reverse">Price</a></td>
+                <td><a>Action</a></td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr  ng-repeat="car in carListCtrl.cars| filter: carfilter | orderBy:carListCtrl.predicate:carListCtrl.reverse">
+                <td>{{car.id}}</td>
+                <td>{{car.year}}</td>
+                <td>{{car.registered| date }}</td>
+                <td>{{car.make}}</td>
+                <td>{{car.model}}</td>
+                <td>{{car.description}}</td>
+                <td>{{car.price| currency}}</td>
+                <td>
+                    <a href="#/editCar/{{car.id}}">edit</a> |
+                    <a href="#/" ng-click="carListCtrl.deleteCar(car.id)">delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <h4>Sort Column: {{carListCtrl.predicate}}</h4>
+    <h4>Reverse: {{carListCtrl.reverse}}</h4>
+</div>
