@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="DemoApp" ng-controller="CarController as ctrl" >
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>{{ctrl.title}}</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
+        <script src="https://code.angularjs.org/1.4.7/i18n/angular-locale_da.js"></script>
+        <script src="app/app.js"></script>
+    </head>
+    <body >
+        <div class="container">
+            <div class="page-header">
+                <h1>{{ctrl.title}}</h1>
+            </div>
+            <ul class="nav nav-tabs">
+                <li role="presentation"><a href="#/">All cars</a></li>
+                <li role="presentation"><a href="#/addCar">Add car</a></li>
+            </ul>
+            <div ng-view></div>
+        </div>
+    </body>
+</html>
