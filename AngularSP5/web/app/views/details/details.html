@@ -1,0 +1,51 @@
+<div class="jumbotron vertical-center">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-lg-offset-2">
+                <div class="panel panel-default">
+
+                    <div class="panel-heading text-center"><b>{{user.title}} {{user.first}}</b></div>
+                    <div class="panel-body">
+                        <div class="row">
+
+                            <div class="col-md-2">
+
+                                <p><b>Gender: </b></p>
+                                <p><b>Street: </b></p>
+                                <p><b>City: </b></p>
+                                <p><b>State: </b></p>
+                                <p><b>Zipcode: </b></p>
+                                <p><b>Email: </b></p>
+                                <p><b>Dob: </b></p>
+                                <p><b>Phone: </b></p>
+                                <p><b>Cell: </b></p>
+                            </div>
+                            <div class="col-md-7 ">
+
+                                <p>{{user.gender}}</p>
+                                <p>{{user.street}}</p>
+                                <p>{{user.city}}</p>
+                                <p>{{user.state}}</p>
+                                <p>{{user.zip}}</p>
+                                <p>{{user.email}}</p>
+                                <p>{{user.dob}}</p>
+                                <p>{{user.phone}}</p>
+                                <p>{{user.cell}}</p>
+                                <div><a class="btn btn-primary" ui-sref="home">Back</a></div>
+                            </div>
+                            <div class="col-md-3">
+                                <img class="img-responsive pull-left" src="{{user.picture.large}}">
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
