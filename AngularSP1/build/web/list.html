@@ -1,0 +1,27 @@
+<h1>Person List</h1>
+<div class="row">
+    <div class="col-md-12">
+
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="person in persons">
+                    <td class="text-center">
+                        {{person.name}}
+                    </td>
+                    <td class="text-center">
+                        <a ui-sref="details({id:person.id})">
+                            {{person.id}}
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
